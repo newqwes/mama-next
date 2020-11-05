@@ -84,7 +84,7 @@ window.onload = function () {
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../images/dest/newLogo.png',
+                    iconImageHref: '../img/newLogo.png',
                     iconImageSize: [32, 32],
                     iconImageOffset: [-16, -16],
                 }
@@ -97,7 +97,7 @@ window.onload = function () {
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../images/dest/newLogo.png',
+                    iconImageHref: '../img/newLogo.png',
                     iconImageSize: [32, 32],
                     iconImageOffset: [-16, -16],
                 }
@@ -110,7 +110,7 @@ window.onload = function () {
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../images/dest/newLogo.png',
+                    iconImageHref: '../img/newLogo.png',
                     iconImageSize: [32, 32],
                     iconImageOffset: [-16, -16],
                 }
@@ -123,7 +123,7 @@ window.onload = function () {
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../images/dest/newLogo.png',
+                    iconImageHref: '../img/newLogo.png',
                     iconImageSize: [32, 32],
                     iconImageOffset: [-16, -16],
                 }
@@ -136,7 +136,7 @@ window.onload = function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.png',
+                iconImageHref: '../img/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }
@@ -149,7 +149,7 @@ window.onload = function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.png',
+                iconImageHref: '../img/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }
@@ -162,7 +162,7 @@ window.onload = function () {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../images/dest/newLogo.png',
+                iconImageHref: '../img/newLogo.png',
                 iconImageSize: [32, 32],
                 iconImageOffset: [-16, -16],
             }

@@ -1,4 +1,4 @@
-export default () => {
+export default ({ stableData }) => {
     return (
         <>
             <section className="feedback" id="feedback">
@@ -6,7 +6,7 @@ export default () => {
                     <span className="ico ico_arrow"></span>
                 </a>
                 <div className="wrapper feedback__wrapper">
-                    <h2>— Доставка —</h2>
+                    <h2>— {stableData.main.delivery} —</h2>
                     <div className="feedback__layout-delivery layout-2-column">
                         <div className="feedback__to-menu">
                             <a

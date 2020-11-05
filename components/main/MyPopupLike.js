@@ -1,4 +1,4 @@
-export default () => {
+export default ({ stableData }) => {
     return (
         <>
             <div id="popup" className="popup">
@@ -7,39 +7,28 @@ export default () => {
                         <a href="#arrowToTop" className="popup__close close-popup">
                             X
                         </a>
-                        <div className="popup__title">Оставьте свой отзыв</div>
-                        <p className="popup__text">Заполните поля и оставьте отзыв о нас</p>
+                        <div className="popup__title">{stableData.main.myPopupLike.firstTitle}</div>
+                        <p className="popup__text">{stableData.main.myPopupLike.secondTitle}</p>
                         <form className="formReview">
                             <div className="form-inner">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required
-                                    placeholder="Ваше имя"
-                                    onInvalid="this.setCustomValidity('Забыли имя')"
-                                    onInput="setCustomValidity('')"
-                                />
+                                <input type="text" name="name" required placeholder={stableData.main.myPopupLike.requiredDescription[0]} />
                                 <input
                                     type="tel"
                                     name="phone"
                                     id="phone"
                                     required
-                                    placeholder="Ваш телефон"
-                                    onInvalid="this.setCustomValidity('Забыли телефон')"
-                                    onInput="setCustomValidity('')"
+                                    placeholder={stableData.main.myPopupLike.requiredDescription[1]}
                                 />
                                 <textarea
                                     name="feedback"
                                     required
-                                    placeholder="Напишите свой отзыв..."
+                                    placeholder={stableData.main.myPopupLike.requiredDescription[2]}
                                     rows="3"
-                                    onInvalid="this.setCustomValidity('Забыли отзыв')"
-                                    onInput="setCustomValidity('')"
                                 ></textarea>
-                                <input type="submit" value="Отправить" />
+                                <input type="submit" value={stableData.main.myPopupLike.button} />
                             </div>
                         </form>
-                        <p className="popup__text">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                        <p className="popup__text">{stableData.main.myPopupLike.description}</p>
                     </div>
                 </div>
             </div>

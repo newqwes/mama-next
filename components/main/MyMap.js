@@ -1,83 +1,83 @@
-export default () => {
+export default ({ stableData }) => {
     return (
         <>
             <section className="map" id="mapTo">
                 <div className="map__wrapper wrapper">
                     <div className="map__title">
                         <h2>
-                            <span className="map__title_at-425">— Рестораны на фудкортах —</span>
+                            <span className="map__title_at-425">— {stableData.main.myMap.title.at425} —</span>
                             <span className="map__title_before-425">
-                                — Рестораны <br />
-                                на фудкортах —
+                                — {stableData.main.myMap.title.before425[0]} <br />
+                                {stableData.main.myMap.title.before425[1]} —
                             </span>
                         </h2>
                     </div>
                     <div className="feedback__layout">
                         <div className="feedback__contacts _anim-items">
                             <div className="feedback__city-left">
-                                <div className="contacts__city-title">Минск</div>
+                                <div className="contacts__city-title">{stableData.main.myMap.city[0]}</div>
                                 <div className="contacts__item">
                                     <div>
-                                        <h4>ТЦ “МОМО”, фудкорт 2 этаж</h4>
+                                        <h4>{stableData.main.myMap.minsk[0][0]}</h4>
                                         <p>
-                                            просп. Партизанский, 150а, <br />
-                                            станция метро Могилевская
+                                            {stableData.main.myMap.minsk[0][1]} <br />
+                                            {stableData.main.myMap.minsk[0][2]}
                                         </p>
                                     </div>
                                     <span className="ico ico_place"></span>
                                 </div>
                                 <div className="contacts__item">
                                     <div>
-                                        <h4>ТРЦ “Dana Mall”, фудкорт 3 этаж</h4>
+                                        <h4>{stableData.main.myMap.minsk[1][0]}</h4>
                                         <p>
-                                            ул. Мстиславца, 11,
+                                            {stableData.main.myMap.minsk[1][1]}
                                             <br />
-                                            станция метро Восток
+                                            {stableData.main.myMap.minsk[1][2]}
                                         </p>
                                     </div>
                                     <span className="ico ico_place"></span>
                                 </div>
                                 <div className="contacts__item">
                                     <div>
-                                        <h4>ТРЦ “Galileo”, фудкорт 3 этаж</h4>
+                                        <h4>{stableData.main.myMap.minsk[2][0]}</h4>
                                         <p>
-                                            ул. Бобруйская, 6,
+                                            {stableData.main.myMap.minsk[2][1]}
                                             <br />
-                                            станция метро площадь Ленина
+                                            {stableData.main.myMap.minsk[2][2]}
                                         </p>
                                     </div>
                                     <span className="ico ico_place"></span>
                                 </div>
                                 <div className="contacts__item">
                                     <div>
-                                        <h4>ТРЦ “Palazzo”, фудкорт 3 этаж</h4>
-                                        <p>ул. Тимирязева, 74А</p>
+                                        <h4>{stableData.main.myMap.minsk[3][0]}</h4>
+                                        <p>{stableData.main.myMap.minsk[3][1]}</p>
                                     </div>
                                     <span className="ico ico_place"></span>
                                 </div>
                             </div>
                             <div className="feedback__city-right">
-                                <div className="contacts__city-title">Брест</div>
+                                <div className="contacts__city-title">{stableData.main.myMap.city[1]}</div>
                                 <div className="contacts__item">
                                     <div>
-                                        <h4>“ЦУМ”, 3 этаж</h4>
-                                        <p>просп. Машерова, 17</p>
+                                        <h4>{stableData.main.myMap.brest[0][0]}</h4>
+                                        <p>{stableData.main.myMap.brest[0][1]}</p>
                                     </div>
                                     <span className="ico ico_place"></span>
                                 </div>
-                                <div className="contacts__city-title">Гомель</div>
+                                <div className="contacts__city-title">{stableData.main.myMap.city[2]}</div>
                                 <div className="contacts__item">
                                     <div>
-                                        <h4>ТРЦ “Секрет”, 1 этаж</h4>
-                                        <p>ул. Гагарина, 65</p>
+                                        <h4>{stableData.main.myMap.gomel[0][0]}</h4>
+                                        <p>{stableData.main.myMap.gomel[0][1]}</p>
                                     </div>
                                     <span className="ico ico_place"></span>
                                 </div>
-                                <div className="contacts__city-title">Могилев</div>
+                                <div className="contacts__city-title">{stableData.main.myMap.city[2]}</div>
                                 <div className="contacts__item">
                                     <div>
-                                        <h4>ТЦ “Парк Сити”, фудкорт 1 этаж</h4>
-                                        <p>Минское шоссе, 31</p>
+                                        <h4>{stableData.main.myMap.mogilev[0][0]}</h4>
+                                        <p>{stableData.main.myMap.mogilev[0][1]}</p>
                                     </div>
                                     <span className="ico ico_place"></span>
                                 </div>

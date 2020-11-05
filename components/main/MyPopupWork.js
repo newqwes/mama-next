@@ -1,4 +1,4 @@
-export default () => {
+export default ({ stableData }) => {
     return (
         <>
             <div id="popup2" className="popup">
@@ -7,64 +7,46 @@ export default () => {
                         <a href="#arrowToTop" className="popup__close close-popup">
                             X
                         </a>
-                        <div className="popup__title">Работай у нас</div>
-                        <p className="popup__text">Заполните поля и наш менеджер свяжется с вами!</p>
+                        <div className="popup__title">{stableData.main.myPopupWork.firstTitle}</div>
+                        <p className="popup__text">{stableData.main.myPopupWork.secondTitle}</p>
                         <form className="formJob">
                             <div className="form-inner">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required
-                                    placeholder="Ваше имя"
-                                    onInvalid="this.setCustomValidity('Забыли имя')"
-                                    onInput="setCustomValidity('')"
-                                />
+                                <input type="text" name="name" required placeholder={stableData.main.myPopupWork.requiredDescription[0]} />
                                 <input
                                     type="text"
                                     name="citizenship"
                                     required
-                                    placeholder="Гражданство"
-                                    onInvalid="this.setCustomValidity('Забыли заполнить')"
-                                    onInput="setCustomValidity('')"
+                                    placeholder={stableData.main.myPopupWork.requiredDescription[1]}
                                 />
-                                <input
-                                    type="number"
-                                    name="age"
-                                    required
-                                    placeholder="Ваш возраст"
-                                    onInvalid="this.setCustomValidity('Забыли указать возраст')"
-                                    onInput="setCustomValidity('')"
-                                />
+                                <input type="number" name="age" required placeholder={stableData.main.myPopupWork.requiredDescription[2]} />
                                 <input
                                     type="text"
                                     name="address"
                                     required
-                                    placeholder="Адрес проживания"
-                                    onInvalid="this.setCustomValidity('Забыли указать адрес')"
-                                    onInput="setCustomValidity('')"
+                                    placeholder={stableData.main.myPopupWork.requiredDescription[3]}
                                 />
                                 <input
                                     type="tel"
                                     name="phone"
                                     id="phone__worker"
                                     required
-                                    placeholder="Ваш телефон"
-                                    onInvalid="this.setCustomValidity('Забыли телефон')"
-                                    onInput="setCustomValidity('')"
+                                    placeholder={stableData.main.myPopupWork.requiredDescription[4]}
                                 />
                                 <input
                                     type="text"
                                     name="position"
                                     required
-                                    placeholder="Желаемая должность"
-                                    onInvalid="this.setCustomValidity('Забыли должность')"
-                                    onInput="setCustomValidity('')"
+                                    placeholder={stableData.main.myPopupWork.requiredDescription[5]}
                                 />
-                                <textarea name="comment" placeholder="Напишите свой комментарий..." rows="3"></textarea>
-                                <input type="submit" value="Отправить" />
+                                <textarea
+                                    name="comment"
+                                    placeholder={stableData.main.myPopupWork.requiredDescription[6]}
+                                    rows="3"
+                                ></textarea>
+                                <input type="submit" value={stableData.main.myPopupWork.button} />
                             </div>
                         </form>
-                        <p className="popup__text">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                        <p className="popup__text">{stableData.main.myPopupWork.description}</p>
                     </div>
                 </div>
             </div>
