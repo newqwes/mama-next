@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-
+import Link from 'next/link';
 class MyDocument extends Document {
     render() {
         return (
@@ -42,51 +42,7 @@ class MyDocument extends Document {
                 </Head>
                 <body>
                     <Main />
-                    <footer className="footer" id="footer">
-                        <div className="footer__wrapper wrapper">
-                            <div className="footer__layouts">
-                                <div className="footer__layouts-item_0 footer__layouts-item_space">
-                                    <a href="index.html" className="logo">
-                                        <img src="/img/footerLogo.png" alt="мама дома" />
-                                    </a>
-                                </div>
 
-                                <div className="footer__layouts-item_3">
-                                    <div className="footer__social-links">
-                                        <ul className="social__menu">
-                                            <li>
-                                                <a href="https://www.facebook.com/mamadoma.official/?eid=ARC1fLCfcMp_iXWRBmOtnfe9J88hnlFDN9BnpAXp2Jzcr2z88Ue7uUQWIZT_J7qgMOVUuZln8QQ8IFYY&timeline_context_item_type=intro_card_work&timeline_context_item_source=100008035755019&fref=tag">
-                                                    <i className="fa fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://vk.com/mamadomaofficial">
-                                                    <i className="fa fa-vk"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.instagram.com/mamadoma_official/?hl=ru">
-                                                    <i className="fa fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://ok.ru/mamadomaofficial">
-                                                    <i className="fa fa-odnoklassniki"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="footer__layouts-item_2">
-                                    <div className="footer__contacts">
-                                        <div className="footer__policy">
-                                            <a href="policy.html">Политика конфиденциальности</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
                     <NextScript />
                     <script src="/js/lib/jquery-3.5.1.min.js"></script>
                     <script src="/js/humburger.js"></script>

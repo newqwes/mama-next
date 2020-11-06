@@ -13,6 +13,7 @@ document.querySelector('.hamburger').addEventListener('click', function (e) {
         this.classList.add('is-active');
     }
 });
+
 window.onscroll = () => {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         document.querySelector('.hamburger').classList.remove('is-active');

@@ -1,4 +1,6 @@
-export default ({ stableData }) => {
+import Link from 'next/link';
+
+export default ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
     return (
         <>
             <header className="header" id="header">
@@ -38,23 +40,37 @@ export default ({ stableData }) => {
                                 <h4>{stableData.main.hamburger.region}</h4>
                                 <ul className="hamburger__ul-regions">
                                     <li>
-                                        <a href="#">{stableData.main.regions.minsk}</a>
+                                        <Link href="/">
+                                            <a onClick={() => setNowCity(stableData.main.regions.minsk)}>{stableData.main.regions.minsk}</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="brest.html">{stableData.main.regions.brest}</a>
+                                        <Link href="/">
+                                            <a onClick={() => setNowCity(stableData.main.regions.brest)}>{stableData.main.regions.brest}</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="gomel.html">{stableData.main.regions.gomel}</a>
+                                        <Link href="/">
+                                            <a onClick={() => setNowCity(stableData.main.regions.gomel)}>{stableData.main.regions.gomel}</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="mogilev.html">{stableData.main.regions.mogilev}</a>
+                                        <Link href="/">
+                                            <a onClick={() => setNowCity(stableData.main.regions.mogilev)}>
+                                                {stableData.main.regions.mogilev}
+                                            </a>
+                                        </Link>
                                     </li>
                                 </ul>
 
                                 <h4>{stableData.main.hamburger.language}</h4>
                                 <div>
-                                    <a href="#">{stableData.main.lang[0]} |</a>
-                                    <a href="be/index.html"> {stableData.main.lang[1]}</a>
+                                    <Link href="/">
+                                        <a onClick={() => setIsRu(true)}>{stableData.main.lang[0]} |</a>
+                                    </Link>
+                                    <Link href="/">
+                                        <a onClick={() => setIsRu(false)}>{stableData.main.lang[1]}</a>
+                                    </Link>
                                 </div>
                             </div>
                         </span>
@@ -64,23 +80,38 @@ export default ({ stableData }) => {
                                 <h3 className="region-hamburger__title">{stableData.main.hamburger.region}</h3>
                                 <ul>
                                     <li>
-                                        <a href="#">{stableData.main.regions.minsk}</a>
+                                        <Link href="/">
+                                            <a onClick={() => setNowCity(stableData.main.regions.minsk)}>{stableData.main.regions.minsk}</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="brest.html">{stableData.main.regions.brest}</a>
+                                        <Link href="/">
+                                            <a onClick={() => setNowCity(stableData.main.regions.brest)}>{stableData.main.regions.brest}</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="gomel.html">{stableData.main.regions.gomel}</a>
+                                        <Link href="/">
+                                            <a onClick={() => setNowCity(stableData.main.regions.gomel)}>{stableData.main.regions.gomel}</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="mogilev.html">{stableData.main.regions.mogilev}</a>
+                                        <Link href="/">
+                                            <a onClick={() => setNowCity(stableData.main.regions.mogilev)}>
+                                                {stableData.main.regions.mogilev}
+                                            </a>
+                                        </Link>
                                     </li>
                                 </ul>
 
                                 <h4>{stableData.main.hamburger.language}</h4>
                                 <div>
-                                    <a href="#">{stableData.main.lang[0]} |</a>
-                                    <a href="be/index.html"> {stableData.main.lang[1]}</a>
+                                    <Link href="/">
+                                        <a onClick={() => setIsRu(true)}>{stableData.main.lang[0]} |</a>
+                                    </Link>
+
+                                    <Link href="/">
+                                        <a onClick={() => setIsRu(false)}>{stableData.main.lang[1]}</a>
+                                    </Link>
                                 </div>
                             </div>
                         </span>
@@ -88,20 +119,35 @@ export default ({ stableData }) => {
                             <div className="dropdown">
                                 <div className="region__now">
                                     <span className="ico ico_region"></span>
-                                    <div className="region__now_label">{stableData.main.regions.minsk}</div>
+                                    <div className="region__now_label">{nowCity}</div>
                                 </div>
                                 <div className="dropdown-content">
-                                    <a href="index.html">{stableData.main.regions.minsk}</a>
-                                    <a href="brest.html">{stableData.main.regions.brest}</a>
-                                    <a href="gomel.html">{stableData.main.regions.gomel}</a>
-                                    <a href="mogilev.html">{stableData.main.regions.mogilev}</a>
+                                    <Link href="/">
+                                        <a onClick={() => setNowCity(stableData.main.regions.minsk)}>{stableData.main.regions.minsk}</a>
+                                    </Link>
+                                    <Link href="/">
+                                        <a onClick={() => setNowCity(stableData.main.regions.brest)}>{stableData.main.regions.brest}</a>
+                                    </Link>
+                                    <Link href="/">
+                                        <a onClick={() => setNowCity(stableData.main.regions.gomel)}>{stableData.main.regions.gomel}</a>
+                                    </Link>
+                                    <Link href="/">
+                                        <a onClick={() => setNowCity(stableData.main.regions.mogilev)}>{stableData.main.regions.mogilev}</a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="header__language">
-                                <a href="#" className="header__language_active">
-                                    {stableData.main.lang[0]}
-                                </a>
-                                |<a href="be/index.html">{stableData.main.lang[1]}</a>
+                                <Link href="/">
+                                    <a className={isRu ? 'header__language_active' : ''} onClick={() => setIsRu(true)}>
+                                        {stableData.main.lang[0]}
+                                    </a>
+                                </Link>
+                                |
+                                <Link href="/">
+                                    <a className={!isRu ? 'header__language_active' : ''} onClick={() => setIsRu(false)}>
+                                        {stableData.main.lang[1]}
+                                    </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

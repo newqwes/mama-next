@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { useState } from 'react';
+import MyFooter from '../components/footer/MyFooter';
 import MetaH1Description from '../components/main/MetaH1Description';
 import MyContacts from '../components/main/MyContacts';
 import MyDelivery from '../components/main/MyDelivery';
@@ -10,23 +9,21 @@ import MyMenu from '../components/main/MyMenu';
 import MyPopupFeedback from '../components/main/MyPopupFeedback';
 import MyPopupLike from '../components/main/MyPopupLike';
 import MyPopupWork from '../components/main/MyPopupWork';
-import myData from '../myData';
 
-export default () => {
-    const [isRu, setIsRu] = useState(true);
-    const data = isRu ? myData.ru : myData.by;
+export default ({ isRu, setIsRu, stableData, nowCity, setNowCity }) => {
     return (
         <>
             <MyHead />
             <MetaH1Description />
-            <MyHeader stableData={data} setIsRu={setIsRu} />
-            <MyDelivery stableData={data} />
-            <MyMenu stableData={data} />
-            <MyPopupFeedback stableData={data} />
-            <MyMap stableData={data} />
-            <MyContacts stableData={data} />
-            <MyPopupLike stableData={data} />
-            <MyPopupWork stableData={data} />
+            <MyHeader stableData={stableData} setIsRu={setIsRu} isRu={isRu} nowCity={nowCity} setNowCity={setNowCity} />
+            <MyDelivery stableData={stableData} />
+            <MyMenu stableData={stableData} />
+            <MyPopupFeedback stableData={stableData} />
+            <MyMap stableData={stableData} />
+            <MyContacts stableData={stableData} />
+            <MyPopupLike stableData={stableData} />
+            <MyPopupWork stableData={stableData} />
+            <MyFooter stableData={stableData} />
         </>
     );
 };

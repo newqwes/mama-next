@@ -1,5 +1,6 @@
 window.onload = function () {
     const city = document.querySelector('.region__now_label').innerHTML;
+
     let cityCenter = [];
     const belarusCountry = [
         'map',

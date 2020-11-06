@@ -12,9 +12,11 @@ for (let anchor of anchors) {
     });
 }
 window.onscroll = function () {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        document.querySelector('.arrow-to-top').style.display = 'block';
-    } else {
-        document.querySelector('.arrow-to-top').style.display = 'none';
+    if (document.querySelector('.arrow-to-top')) {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            document.querySelector('.arrow-to-top').style.display = 'block';
+        } else {
+            document.querySelector('.arrow-to-top').style.display = 'none';
+        }
     }
 };
