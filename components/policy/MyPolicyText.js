@@ -1,5 +1,5 @@
 // Для возможности лучшего перевода перенести бы всё в файл data
-export default () => {
+const MyPolicyText = () => {
     return (
         <>
             <section class="policy">
@@ -193,3 +193,4 @@ export default () => {
         </>
     );
 };
+export default MyPolicyText;

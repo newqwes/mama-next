@@ -23,9 +23,7 @@ const MyHeader = ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
                             <ul>
                                 {stableData.main.menuNavigation.map((n) => (
                                     <li>
-                                        <Link href={'/' + n.link}>
-                                            <a>{n.text}</a>
-                                        </Link>
+                                        <a href={'/' + n.link}>{n.text}</a>
                                     </li>
                                 ))}
                             </ul>
@@ -143,5 +141,4 @@ const MyHeader = ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
         </>
     );
 };
-
 export default MyHeader;

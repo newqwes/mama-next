@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default () => {
+const MyFooter = () => {
     return (
         <>
             <footer className="footer" id="footer">
@@ -53,3 +53,4 @@ export default () => {
         </>
     );
 };
+export default MyFooter;
