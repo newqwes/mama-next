@@ -1,5 +1,5 @@
 // Для возможности лучшего перевода перенести бы всё в файл data
-const MyMenuContent = ({ stableData, isRu, nowCity }) => {
+const MyMenuContent = ({ stableData, nowCity }) => {
     let isMinsk = nowCity === 'Минск';
     return (
         <>

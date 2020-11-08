@@ -6,17 +6,21 @@ import MyHeader from '../../components/menu/MyHeader';
 import MyMenuContent from '../../components/menu/MyMenuContent';
 
 const MyMenuPage = ({ isRu, setIsRu, stableData, nowCity, setNowCity }) => {
-    const menuPageNumber = useRouter().query.id;
-    if (menuPageNumber > stableData.menu.length || menuPageNumber < 0) {
-        menuPageNumber = 0;
+    let menuPageNumber = useRouter();
+    let currentMenuPageNumber;
+    if (menuPageNumber.query.id && menuPageNumber.query.id >= 0 && menuPageNumber.query.id <= 6) {
+        currentMenuPageNumber = menuPageNumber.query.id;
+    } else {
+        currentMenuPageNumber = 0;
     }
-    let menuData = stableData.menu[menuPageNumber];
+    let menuData = stableData.menu[currentMenuPageNumber];
+
     return (
         <>
             <MyHead />
             <MetaH1Description />
             <MyHeader stableData={stableData} setIsRu={setIsRu} isRu={isRu} nowCity={nowCity} setNowCity={setNowCity} />
-            <MyMenuContent stableData={menuData} isRu={isRu} nowCity={nowCity} />
+            <MyMenuContent stableData={menuData} nowCity={nowCity} />
             <MyFooter stableData={stableData} />
         </>
     );
