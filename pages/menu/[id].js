@@ -16,7 +16,6 @@ const MyMenuPage = ({ isRu, setIsRu, stableData, nowCity, setNowCity }) => {
             <MyHead />
             <MetaH1Description />
             <MyHeader stableData={stableData} setIsRu={setIsRu} isRu={isRu} nowCity={nowCity} setNowCity={setNowCity} />
-            <h1>{menuPageNumber}</h1>
             <MyMenuContent stableData={menuData} isRu={isRu} nowCity={nowCity} />
             <MyFooter stableData={stableData} />
         </>

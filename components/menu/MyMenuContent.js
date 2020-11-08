@@ -1,5 +1,6 @@
 // Для возможности лучшего перевода перенести бы всё в файл data
 const MyMenuContent = ({ stableData, isRu, nowCity }) => {
+    let isMinsk = nowCity === 'Минск';
     return (
         <>
             <section className="menu-page-items">
@@ -13,8 +14,8 @@ const MyMenuContent = ({ stableData, isRu, nowCity }) => {
                                 <div className="menu__item menu-page__links _anim-items bgcacent">
                                     <span className={`menu-page__image menu-page__image_${n.image}`}></span>
                                     <div className="menu-page__circle-price">
-                                        {n.price[0]}
-                                        <sup>{n.price[1]}</sup>
+                                        {isMinsk ? n.price.minsk[0] : n.price.other[0]}
+                                        <sup>{isMinsk ? n.price.minsk[1] : n.price.other[1]}</sup>
                                     </div>
                                     <h4>{n.name}</h4>
                                     <p className="menu-page__kalories">{n.gramm}</p>

@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const MyHeader = ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
+    const menuPageNumber = useRouter().query.id;
     return (
         <>
             <header className="menu-page-header">
@@ -30,22 +32,22 @@ const MyHeader = ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
                             <h4>{stableData.main.hamburger.region}</h4>
                             <ul className="hamburger__ul-regions">
                                 <li>
-                                    <Link href="/policy">
+                                    <Link href={`/menu/${menuPageNumber}`}>
                                         <a onClick={() => setNowCity(stableData.main.regions.minsk)}>{stableData.main.regions.minsk}</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/policy">
+                                    <Link href={`/menu/${menuPageNumber}`}>
                                         <a onClick={() => setNowCity(stableData.main.regions.brest)}>{stableData.main.regions.brest}</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/policy">
+                                    <Link href={`/menu/${menuPageNumber}`}>
                                         <a onClick={() => setNowCity(stableData.main.regions.gomel)}>{stableData.main.regions.gomel}</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/policy">
+                                    <Link href={`/menu/${menuPageNumber}`}>
                                         <a onClick={() => setNowCity(stableData.main.regions.mogilev)}>{stableData.main.regions.mogilev}</a>
                                     </Link>
                                 </li>
@@ -53,10 +55,10 @@ const MyHeader = ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
 
                             <h4>{stableData.main.hamburger.language}</h4>
                             <div>
-                                <Link href="/policy">
+                                <Link href={`/menu/${menuPageNumber}`}>
                                     <a onClick={() => setIsRu(true)}>{stableData.main.lang[0]} |</a>
                                 </Link>
-                                <Link href="/policy">
+                                <Link href={`/menu/${menuPageNumber}`}>
                                     <a onClick={() => setIsRu(false)}>{stableData.main.lang[1]}</a>
                                 </Link>
                             </div>
@@ -68,22 +70,22 @@ const MyHeader = ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
                             <h3 className="region-hamburger__title">{stableData.main.hamburger.region}</h3>
                             <ul>
                                 <li>
-                                    <Link href="/policy">
+                                    <Link href={`/menu/${menuPageNumber}`}>
                                         <a onClick={() => setNowCity(stableData.main.regions.minsk)}>{stableData.main.regions.minsk}</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/policy">
+                                    <Link href={`/menu/${menuPageNumber}`}>
                                         <a onClick={() => setNowCity(stableData.main.regions.brest)}>{stableData.main.regions.brest}</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/policy">
+                                    <Link href={`/menu/${menuPageNumber}`}>
                                         <a onClick={() => setNowCity(stableData.main.regions.gomel)}>{stableData.main.regions.gomel}</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/policy">
+                                    <Link href={`/menu/${menuPageNumber}`}>
                                         <a onClick={() => setNowCity(stableData.main.regions.mogilev)}>{stableData.main.regions.mogilev}</a>
                                     </Link>
                                 </li>
@@ -91,11 +93,11 @@ const MyHeader = ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
 
                             <h4>{stableData.main.hamburger.language}</h4>
                             <div>
-                                <Link href="/policy">
+                                <Link href={`/menu/${menuPageNumber}`}>
                                     <a onClick={() => setIsRu(true)}>{stableData.main.lang[0]} |</a>
                                 </Link>
 
-                                <Link href="/policy">
+                                <Link href={`/menu/${menuPageNumber}`}>
                                     <a onClick={() => setIsRu(false)}>{stableData.main.lang[1]}</a>
                                 </Link>
                             </div>
@@ -103,13 +105,13 @@ const MyHeader = ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
                     </span>
                     <div className="header__region">
                         <div className="header__language">
-                            <Link href="/policy">
+                            <Link href={`/menu/${menuPageNumber}`}>
                                 <a className={isRu ? 'header__language_active' : ''} onClick={() => setIsRu(true)}>
                                     {stableData.main.lang[0]}
                                 </a>
                             </Link>
                             |
-                            <Link href="/policy">
+                            <Link href={`/menu/${menuPageNumber}`}>
                                 <a className={!isRu ? 'header__language_active' : ''} onClick={() => setIsRu(false)}>
                                     {stableData.main.lang[1]}
                                 </a>
@@ -121,16 +123,16 @@ const MyHeader = ({ stableData, setIsRu, isRu, nowCity, setNowCity }) => {
                                 <div className="region__now_label">{nowCity}</div>
                             </div>
                             <div className="dropdown-content">
-                                <Link href="/policy">
+                                <Link href={`/menu/${menuPageNumber}`}>
                                     <a onClick={() => setNowCity(stableData.main.regions.minsk)}>{stableData.main.regions.minsk}</a>
                                 </Link>
-                                <Link href="/policy">
+                                <Link href={`/menu/${menuPageNumber}`}>
                                     <a onClick={() => setNowCity(stableData.main.regions.brest)}>{stableData.main.regions.brest}</a>
                                 </Link>
-                                <Link href="/policy">
+                                <Link href={`/menu/${menuPageNumber}`}>
                                     <a onClick={() => setNowCity(stableData.main.regions.gomel)}>{stableData.main.regions.gomel}</a>
                                 </Link>
-                                <Link href="/policy">
+                                <Link href={`/menu/${menuPageNumber}`}>
                                     <a onClick={() => setNowCity(stableData.main.regions.mogilev)}>{stableData.main.regions.mogilev}</a>
                                 </Link>
                             </div>
