@@ -136,9 +136,11 @@
     }
 
     h4 {
+        margin: 0 auto;
         @include font(2.2rem, 2.4rem, bold);
         min-height: 2.8rem;
         margin-bottom: 5px;
+        max-width: 300px;
     }
 
     &:hover {

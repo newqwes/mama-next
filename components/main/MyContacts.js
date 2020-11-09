@@ -18,10 +18,8 @@ export default ({ stableData }) => {
                                         {stableData.main.myContacts.contacts[0][1]} <br />
                                         {stableData.main.myContacts.contacts[0][2]} <br />
                                         {stableData.main.myContacts.contacts[0][3]} <br />
-                                        <em>
-                                            {stableData.main.myContacts.contacts[0][4]} <br />
-                                            {stableData.main.myContacts.contacts[0][5]}
-                                        </em>
+                                        {stableData.main.myContacts.contacts[0][4]} <br />
+                                        {stableData.main.myContacts.contacts[0][5]}
                                     </p>
                                 </div>
                             </div>
@@ -29,8 +27,8 @@ export default ({ stableData }) => {
                                 <div className="contacts__place-ico_time">
                                     <h4>
                                         <span className="ico ico_clock"></span> {stableData.main.myContacts.contacts[1][0]} <br />
-                                        {stableData.main.myContacts.contacts[1][1]}
                                     </h4>
+                                    <p>{stableData.main.myContacts.contacts[1][1]}</p>
                                 </div>
                             </div>
                         </div>
