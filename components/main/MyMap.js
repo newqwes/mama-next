@@ -73,7 +73,7 @@ export default ({ stableData }) => {
                                     </div>
                                     <span className="ico ico_place"></span>
                                 </div>
-                                <div className="contacts__city-title">{stableData.main.myMap.city[2]}</div>
+                                <div className="contacts__city-title">{stableData.main.myMap.city[3]}</div>
                                 <div className="contacts__item">
                                     <div>
                                         <h4>{stableData.main.myMap.mogilev[0][0]}</h4>

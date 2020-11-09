@@ -1,6 +1,10 @@
 .about-us {
     padding: 80px 0;
     color: $color-text;
+    h2 {
+        padding: 0;
+        margin: 0 0 80px 0;
+    }
 }
 .about-us__wrapper {
     text-align: center;

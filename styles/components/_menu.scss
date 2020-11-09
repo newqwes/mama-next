@@ -10,9 +10,12 @@
 .menu__item {
     margin: 15px 5px;
 }
-
-.menu__layout {
-    margin: 50px 0;
+.menu__title {
+    margin-bottom: 80px - 15px; // margin of menu__item 15px
+    h2 {
+        padding: 0;
+        margin: 0;
+    }
 }
 .menu__links._long-desc {
     &::after {
